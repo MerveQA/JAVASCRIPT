@@ -74,7 +74,8 @@ switch (lesson.toLowerCase()) {
     
 }
 
-// practice 05 :
+// practice 05 : Girilen nota göre geçti veya kaldı yazıran programı yazınız.
+// Geçme notunu 50 olark kabul edebilirsiniz
 
 // practice 06 :
 
