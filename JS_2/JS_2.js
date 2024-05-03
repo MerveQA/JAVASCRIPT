@@ -30,3 +30,90 @@ console.log(Boolean(tanimsiz));
 console.log(Boolean(bos));
 
 // Bu yukardeki 5 değer hariç tüm kullanımların boolean değeri true dur
+
+
+// KARAR DEYİMLERİ 
+// İF ELSE
+const yas = 18;
+if(yas<18) {
+    console.log("cocuk");
+} else {
+    console.log("yetişkin");
+}
+
+
+let sonuc ; // undefined
+
+if(yas<=3){
+sonuc = "bebek";
+} else if(yas<=14){
+sonuc = "ergen"
+} else if (yas<18){
+sonuc = "genç";
+} else {
+sonuc = "sonuc yetişkin"
+}
+console.log(sonuc);
+
+// consoldan veri alma
+// let age = prompt("Please enter your age"); // Burdaki 10 default değer
+// if(age<18) {
+//    console.log("you are alive");
+// }
+
+// koşılu dışarıya alma advanced
+const bireyYas = 21;
+const cinsiyet = "erkek";
+const saglikli = true;
+
+// const kosul = bireyYas>=18 && cinsiyet=="erkek" && saglikli==true;
+// if(kosul==true) {
+// console.log("Askere gidebilir");
+// } else {
+// consolelog("Askere gidemez");
+// }
+
+// SWİTCH CASE
+// promt tan gelen string olarak belirleniyor.
+// bunun için 
+let gun =prompt("1-7 arasi bir sayi giriniz");
+
+
+switch(parseInt(gun)) {
+    case 1 :
+        gun = "pazartesi";
+        break;
+    case 2 :
+        gun = "sali"
+        break;
+    case 3 :
+        gun = "carsamba";
+        break;
+    case 4 :
+        gun = "perşembe";
+        break;
+    case 5 :
+        gun = "cuma";
+        break;
+    case 6 :
+        gun = "cumartesi";
+        break;
+    case 7 : 
+    gun = "pazar";
+    break;
+      
+      default :
+    alert("Gun 1-7 arasinda olmalidir");
+    break;  
+}
+
+console.log("gun");
+
+// Ternary
+
+
+
+
+
+
+    
