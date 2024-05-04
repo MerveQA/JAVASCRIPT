@@ -43,7 +43,7 @@ if(islem=="addition"){
 let lesson =prompt("Enter the day you want to learn the course schedule");
 
 
-switch (lesson.toLowerCase()) {
+switch (lesson) {
     case "monday":    
     case "tuesday":
     case "wednesday":
@@ -51,7 +51,7 @@ switch (lesson.toLowerCase()) {
     case "friday":
     case "saturday":
     case "sunday":
-        switch (lesson.toLowerCase()) {
+        switch (lesson) {
             case "monday":
             case "tuesday":
             case "wednesday":
@@ -73,14 +73,43 @@ switch (lesson.toLowerCase()) {
         alert("Wrong day entered");
     
 }
+console.log(lesson);
 
 // practice 05 : Girilen nota göre geçti veya kaldı yazıran programı yazınız.
 // Geçme notunu 50 olark kabul edebilirsiniz
+let note = prompt("enter note");
 
-// practice 06 :
+const result = note>50 ? "PASS" : "FAIL";
+console.log(result);
 
-// practice 07 :
+// practice 06 : Girilen nota gör gecti, kaldı veya şartlı gecti yazdıran programı yazalım
+// note < 40 kaldı
+// 40 < note < 50 sartlı gecti
+// note > 50 gecti
+
+let not = prompt(" enter your note ");
+
+const result2 = not >=50 ? "PASS" : (not < 40 ? "FAIL" : "conditional pass" );
+console.log(result2);
+
+// practice 07 :Consoldan kişinin maaşını alın
+// eğer girilen maaş asgari ücretten az ise maaşa %50 zam
+// Aksi taktirde %10 zam
+
+let salary = prompt(" Please enter your salary");
+const minimumWage = 17000;
+
+const increasedSalary = salary<minimumWage ? salary*1.5 : salary*1.1;
+console.log(increasedSalary);
+
  
-// practice 08 :
+// practice 08 : /Consoldan kişinin gelir ve giderini alınız
+// eğer geliri giderinden en az asgari ücret kadar fazla ise kredi verilebilir değilse kredi verilemez
+
+let income = prompt("Please enter your income");
+let expense = prompt("Please enter your expense");
+// const minimumWage = 17000;
+const crediResult = income-expense >=minimumWage ? "creditable" : "notCreditable";
+console.log(crediResult);
 
 

@@ -76,40 +76,49 @@ const saglikli = true;
 // SWİTCH CASE
 // promt tan gelen string olarak belirleniyor.
 // bunun için 
-let gun =prompt("1-7 arasi bir sayi giriniz");
+// let gun =prompt("1-7 arasi bir sayi giriniz");
+
+// if (isNaN(gun) || gun < 1 || gun > 7 ) {
+//     alert("Gecersiz giris! Lutfen 1-7 arasi bir sayi giriniz.");
+//   } else {
+// switch(parseInt(gun)) {
+//     case 1 :
+//         gun = "pazartesi";
+//         console.log(gun);
+//         break;
+//     case 2 :
+//         gun = "sali"
+//         console.log(gun);
+//         break;
+//     case 3 :
+//         gun = "carsamba";
+//         console.log(gun);
+//         break;
+//     case 4 :
+//         gun = "perşembe";
+//         console.log(gun);
+//         break;
+//     case 5 :
+//         gun = "cuma";
+//         console.log(gun);
+//         break;
+//     case 6 :
+//         gun = "cumartesi";
+//         console.log(gun);
+//         break;
+//     case 7 : 
+//     gun = "pazar";
+//     console.log(gun);
+//     break;
+// }}
 
 
-switch(parseInt(gun)) {
-    case 1 :
-        gun = "pazartesi";
-        break;
-    case 2 :
-        gun = "sali"
-        break;
-    case 3 :
-        gun = "carsamba";
-        break;
-    case 4 :
-        gun = "perşembe";
-        break;
-    case 5 :
-        gun = "cuma";
-        break;
-    case 6 :
-        gun = "cumartesi";
-        break;
-    case 7 : 
-    gun = "pazar";
-    break;
-      
-      default :
-    alert("Gun 1-7 arasinda olmalidir");
-    break;  
-}
-
-console.log("gun");
 
 // Ternary
+const hiz = 90 ;
+const mesaj = hiz>120?"hizli":"yavas";
+console.log(mesaj);
+
 
 
 
