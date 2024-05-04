@@ -76,3 +76,9 @@ const topla = (a,b) => {
     return a+b;
 };
 console.log(topla(7,8));
+
+// örnek arrow
+const selamVer = () => {
+    alert("MERHABA");
+};
+selamVer();
