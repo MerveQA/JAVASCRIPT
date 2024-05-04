@@ -119,10 +119,49 @@ const hiz = 90 ;
 const mesaj = hiz>120?"hizli":"yavas";
 console.log(mesaj);
 
+// TEKRARLANAN DURUMLAR (ITERATOR)
+for(let i=0; i<10; i++) {
+    console.log("Hello world");
+}
+
+// 1 den 10 a ladar sayıların toplamını yazırınız
+let toplam = 0;
+for(let t =1 ; t<=10;t++){
+toplam+=t;
+}
+console.log(toplam);
+
+// 1 den n e kadar olan sayıların toplamı
+let n = prompt("pozitif bir sayi giriniz");
+toplam = 0;
+for(let k = 0 ; k<n; k++){
+    toplam+=k;
+}
+console.log(toplam);
+
+// sayının asal olup olmadıgnı bulan kod yazınız.
+const sayi2 = prompt("Bir sayi giriniz ");
+const asalMi = (sayi2) => {
+    let asal = true;
+    for(let i=2; i<sayi2 ; i++){
+        if(sayi2%i==0) {
+            asal = false;
+            break;
+        }
+    }
+   return asal ? "ASAL" : "ASAL DEĞİL"; 
+};
+console.log(`Bu ${sayi2} asal mi? : ${asalMi(sayi2)}`);
 
 
+// WHİLE
+// 1 den 10 a kadar olan sayıların toplamını yazıdırn
+let i = 1;
+let toplam2 = 0;
+while(i<=10){
+   toplam2+=i;
+   i++; 
+}
+console.log("toplam : "+toplam2);
 
 
-
-
-    
