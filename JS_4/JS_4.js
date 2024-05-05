@@ -118,12 +118,30 @@ console.log(StringEkleme(arabalar));
 // Soru : bir dizideki elemanları her birini ayrı ayrı yazıran uygıulamayı 
 // for each ile yapın
 let ogrenciler = ["ayse","fatma","hayriye"];
+ogrenciler.forEach(yazdir);
 function yazdir(v){
     console.log(v);
 }
-ogrenciler.forEach(yazdir);
 
 // ayni soruyu arrow function ile yapma
 ogrenciler.forEach((v) => console.log(v));
 
+// Bir dizideki elemanların toplamını bularak bunu h2 elemanı olarak 
+// web sayfasına yazdıran uygulamayı FOR EACH methodu ile yazınız.
+const dizi3 = [4,5,6,7,8,9];
 
+
+
+let toplam3 = 0;
+const toplamaFonk = (d3) =>{
+toplam3 += d3;
+document.querySelector(".toplam").innerHTML = toplam3;
+}
+dizi3.forEach(toplamaFonk);
+
+// aynı soruyu arrow functiob kulllarak yapalım.
+let t = 0;
+dizi3.forEach((s) => (t+=s));
+document.querySelector(".toplam").innerHTML = t;
+
+// FOR EACH METHODUNDA İNDEX KULLANIMI
