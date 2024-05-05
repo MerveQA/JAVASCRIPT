@@ -78,7 +78,72 @@ const topla = (a,b) => {
 console.log(topla(7,8));
 
 // örnek arrow
+// const selamVer = () => alert("Merhaba"); şeklinde de yazılabilir
+// arrow function da this anahtarı kullanılamiyor
 const selamVer = () => {
-    alert("MERHABA");
+   alert("MERHABA");
 };
 selamVer();
+
+
+// ust alma örnevi arrow
+const us = (a,b) => {
+    console.log(a**b);
+};
+
+us(3,2); // 9
+
+// SORU : Dogum tarıhını parametre olarak alan ve ana programa yası hesaplayıp
+// donduren prgrami yaziniz.
+
+let dt = prompt("dgm tarinizi giriniz");
+const yas = (DT) => {
+    const tarih = new Date();
+    const yil = tarih.getFullYear();
+  let yas = yil - DT;
+  return yas;
+};
+console.log(yas(1986));
+
+// FONKSİYONUN BAŞKA BİR FONKSİYONU CAĞIRMASI
+const meyveDilimi = (meyveAdedi) => meyveAdedi*4;
+
+const meyveSuyuHazirla = (x,y) => {
+const first = meyveDilimi(x);
+const second = meyveDilimi(y);
+console.log(`Bu meyve suyunda ${first} dilim portakal ${second} dilim elmadan oluşmuştur  `);
+};
+
+meyveSuyuHazirla(2,4);
+
+//Fonksiyonlarda scope kavramı
+// Block Scope Tanimlamasi
+{
+    const sayi = 3;
+  }
+  let sayi3 = 5;
+  const yeniSayi = function () {
+    sayi3 = 10;
+    console.log("sayi3 fonksiyon icerisinde soyle : ", sayi3);
+  };
+  yeniSayi();
+  console.log("sayi3 fonksiyon disinda soyle : ", ++sayi3);
+  let sayi4 = 3;
+  const yeniSayi2 = function () {
+    let sayi4 = 7;
+    console.log("sayi4 fonkisyon icerisnde su sekilde : ", sayi4);
+  };
+  yeniSayi2();
+  console.log("sayi4 fonksiyon disinda soyle : ", sayi4);
+  const fonk = function (x) {
+    let negatif;
+    if (x < 0) {
+      negatif = "true";
+    } else {
+      negatif = "false";
+    }
+    console.log(negatif);
+  };
+  fonk(3);
+
+  
