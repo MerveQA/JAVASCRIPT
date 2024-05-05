@@ -146,4 +146,30 @@ meyveSuyuHazirla(2,4);
   };
   fonk(3);
 
+  // DİZİLER
+  const arabalar = ["mercedes","Ferrari","BMW","Volvo"];
+  const arabalar2 = new Array ("mercedes","Ferrari");
+
+  console.log(arabalar);
+  console.log(arabalar[0]);
+  console.log(arabalar[arabalar.length-1]);
+  arabalar[0] = "tofaş";
+  console.log(arabalar);
+
+  // Dizilerde farkli veri tipleri tutabiliyoruz
+  const newDizi = ["ABC", arabalar , 1 , true];
+
+  // JS HAZIR DİZİ METHODLARI
+  // --> Diziyi değiştiren methodlar
+  const meyveler = ["Elma","Armut","Muz","Kivi","Cilek"];
+  console.log(meyveler.pop()); // son elemanı çıkartır ve bize yazar
+  console.log(meyveler);
+  console.log(meyveler.push("Karpuz")); // yeni listenin lenghtini verir
+  console.log(meyveler);
+  console.log(meyveler.shift());
+  console.log(meyveler);
+  console.log(meyveler.unshift("Kayisi")); // ilk indexe yeni eleman ekler ve lenght verir
+  console.log(meyveler);
+  console.log(meyveler.reverse());  // diziyi ters cevirir
+  console.log(meyveler);
   
