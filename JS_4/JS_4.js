@@ -194,4 +194,11 @@ const koordinat = [12,-56,100,-78];
 const negatifKoor = koordinat.filter((x)=>(x<0));
 console.log(negatifKoor);
 
-//
+//PIPELINE (HAT)
+//örnek : koordinatlar dizisindeki negatif koordinatları sec
+// bunları pozitife cevir
+// alt alta konsola yazdır
+const pozitfeCevir = koordinat.
+filter((x)=>x<0).
+map((t)=>(t*-1)).
+forEach((y)=>(console.log(y)));
