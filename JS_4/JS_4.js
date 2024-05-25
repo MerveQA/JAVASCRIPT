@@ -139,9 +139,59 @@ document.querySelector(".toplam").innerHTML = toplam3;
 }
 dizi3.forEach(toplamaFonk);
 
-// aynı soruyu arrow functiob kulllarak yapalım.
+// aynı soruyu arrow function kulllarak yapalım.
 let t = 0;
 dizi3.forEach((s) => (t+=s));
 document.querySelector(".toplam").innerHTML = t;
 
 // FOR EACH METHODUNDA İNDEX KULLANIMI
+// Örnek : Belirtilen dizinin her bir elemanının 5 katını alarak ayrı bir 
+// dizide saklayan uygulamayı foreach methodu ile yazınız.
+const dizi2 = [5,3,8,9,0];
+const yenDizi = [];
+dizi2.forEach(katAl);
+
+function katAl (değer , indis , dizi2) {
+    yenDizi[indis] = değer*5;
+}
+console.log(yenDizi);
+
+// arrow function ile yapalım
+dizi2.forEach((d,i)=> yenDizi[i]=d*5);
+console.log(yenDizi);
+
+// ARRAY MAP() METHODU
+// Array.map() methodu , bir fonction ı parametre olarak alır.
+// diziyi değiştirir ve yeni diziyi dmndürür.
+// ilk dizi değişmez . yeni dizi döner
+const yeniRakamlar = [4,6,7,8,9];
+const carpilmisRakamlar = yeniRakamlar.map((x) => x*5);
+
+// Örnek : Bir dizideki tüm isimleri BÜYÜK harfe dönüştüren uygulamayı yazınız.
+let isimler = ["ayse","fatma","hayriye"];
+isimler = isimler.map((x)=> x.toUpperCase());
+console.log(isimler);
+
+// örnek : fiyatlar dizisindeki fiyatların euro ve dolar
+// karşılıklarını hesaplatarak yeni dizilere kaydedin
+const euro = 33.4;
+const dolar = 32.3;
+const tl = [100,150,50,20];
+const dolartl = tl.map((x)=>x*dolar);
+const eurotl = tl.map((x)=> x*euro);
+console.log(dolartl);
+console.log(eurotl);
+
+// MAP() METHODU
+// Örnek : tl dizisindeki urünlere zam yapılmak isteniyor. fiyatı 100 tlden fazla olanara 
+// %10 zam , 100tl den az olanlara ise %15 zam yapılamk isteniyor. 
+// Ayrıca zamlı olan yeni değerleri diziye saklamak istyrz.???
+
+// filter methodu : diziden filtreleme saglar
+// örnek : koordinatların sadece negatif olanlarını 
+// yazdıralım
+const koordinat = [12,-56,100,-78];
+const negatifKoor = koordinat.filter((x)=>(x<0));
+console.log(negatifKoor);
+
+//
