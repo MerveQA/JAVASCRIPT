@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title" >Document</title>
+</head>
+<body id="body">
+
+    <h1 class="header" onmouseover="style.color='yellow'" onmouseout="style.color = 'red'"></h1>
+    <p id="demo" onmouseover="yaziSiyah()" onmouseout="yaziMavi()">JAVASCRIPT DOM ÖĞRENİYORUM</p>
+    <button id="btn"></button>
+    <button id="btn2">Tikla</button>
+    <img src="eye.jpg" alt="eye"/>
+
+    <script>
+   const paragraf = document.getElementById("demo");
+   paragraf.style.color = "red";
+   const yaziSiyah = () => (paragraf.style.color = "black");
+   const yaziMavi = () => (paragraf.style.color = "purple")
+
+   const button = document.getElementById("btn");
+   button.style.backgroundColor = "yellow";
+   button.innerText = "TIKLA";
+   button.style.fontSize = 20;
+
+   const resim = document.getElementsByTagName("img");
+   resim[0].style.borderStyle = "solid";
+   resim[0].style.borderColor = "red";
+
+   const header = document.getElementsByClassName("header");
+   header[0].innerText = "DOM Manipulasyonu";
+   header[0].style.fontSize = 20;
+   header[0].style.fontFamily = "Tahoma";
+   header[0].style.color = "blue";
+
+   const body = document.querySelector("#body");
+   body.style.backgroundColor = "aqua";
+
+   const title = document.querySelector(".title");
+   title.innerText = "DOM Öğreniyorum"
+
+   const btn2 = document.getElementById("btn2");
+   btn2.onclick = function () {
+    document.getElementById("body").style.backgroundColor = "green";
+    document.querySelector("#btn2").innerText = "TIKLANDI";
+   }
+
+    </script>
+</body>
+</html>

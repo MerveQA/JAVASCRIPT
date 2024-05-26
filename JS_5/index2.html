@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="demo"></p>
+   
+   <script>
+function myDisplay(some){
+
+    document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1,num2, myCallback){
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+// callback function : mir method içinde başka bir method oluşturma 
+// myDisplay e git ordaki toplamı myCallback olarak olmak
+myCalculator(3,5,myDisplay);
+
+
+
+
+   </script>
+    
+
+
+
+</body>
+</html>
