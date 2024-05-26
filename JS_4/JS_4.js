@@ -202,3 +202,29 @@ const pozitfeCevir = koordinat.
 filter((x)=>x<0).
 map((t)=>(t*-1)).
 forEach((y)=>(console.log(y)));
+
+// REDUCE() METHODU
+// Array.reduce() bir fonksiyonu parametre olarak alır ve 
+// orjinal diziyi bu fonksiyona göre işleyerek tek vir değer dndurur
+// dziyi değiştirmez sadece bir değer dndrr.
+
+// örnek : Bir dizinin değerler toplamını bulalım
+// 1.yol
+const deger = [6,7,8];
+const degerlerToplami = deger.reduce(function(x,y)
+{
+    return x+y;
+});
+console.log(degerlerToplami);
+
+// 2.yol
+const dt = deger.reduce((x,y)=> x+y);
+console.log(dt);
+
+// örnek : Bir firma 3000 tl den az olan maaşlara %10 zam yapmak istyor.
+// ve zam yapılan bu kişilere toplam kaç tl ödeneceğini bilmek istiyor.
+
+const maaslar = [3000,2891,3500,4200,7000,2500];
+const tplm = maaslar.filter((x)=>x<3000)
+.map((y)=>y*1.1).reduce((k,l)=>(k+l));
+console.log(tplm);

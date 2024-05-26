@@ -19,3 +19,18 @@ filter((y)=>(y.toLowerCase()).
 startsWith(harf.toLowerCase()))
 .forEach((t)=>(console.log(t)))
 ;
+
+const bireyler2 = ["alice", "Bob", "Tiff", "Bruce", "Ahmet", "Mehmet", "Veli"];
+
+function harfIleBaslayanlariSec(bireyler2, harf) {
+  return bireyler2.filter(birey => birey.toLowerCase().startsWith(harf.toLowerCase()));
+}
+
+// Örnek kullanım
+const aIleBaslayanlar = harfIleBaslayanlariSec(bireyler2, 'A');
+console.log(aIleBaslayanlar); // ["alice", "Ahmet"]
+
+const bIleBaslayanlar = harfIleBaslayanlariSec(bireyler2, 'B');
+console.log(bIleBaslayanlar); // ["Bob", "Bruce"]
+
+
