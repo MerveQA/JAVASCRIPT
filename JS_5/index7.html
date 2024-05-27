@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="title" >Document</title>
-</head>
-<body id="body">
-
-    <h1 class="header" onmouseover="style.color='yellow'" onmouseout="style.color = 'red'"></h1>
-    <p id="demo" onmouseover="yaziSiyah()" onmouseout="yaziMavi()">JAVASCRIPT DOM ÖĞRENİYORUM</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="title">Document</title>
+  </head>
+  <body id="body">
+    <h1
+      class="header"
+      onmouseover="style.color='blue'"
+      onmouseout="style.color='black'"
+    ></h1>
+    <h2 class="etiket">RENK: <span class="renk-yazi">"white"</span></h2>
+    <button class="btn renk">RENK DEGISTIR</button>
+    <p id="demo" onmouseover="yaziSiyah()" onmouseout="yaziMavi()">
+      JAVASCRIPT DOM OGRENIYORUM
+    </p>
     <button id="btn"></button>
-    <button id="btn2">Tikla</button>
-    <img src="eye.jpg" alt="eye"/>
-
+    <button id="btn2">TIKLA</button>
+    <img src="cat.jpg" alt="Cat" />
     <script>
-   const paragraf = document.getElementById("demo");
-   paragraf.style.color = "red";
-   const yaziSiyah = () => (paragraf.style.color = "black");
-   const yaziMavi = () => (paragraf.style.color = "purple")
-
-   const button = document.getElementById("btn");
-   button.style.backgroundColor = "yellow";
-   button.innerText = "TIKLA";
-   button.style.fontSize = 20;
-
-   const resim = document.getElementsByTagName("img");
-   resim[0].style.borderStyle = "solid";
-   resim[0].style.borderColor = "red";
-
-   const header = document.getElementsByClassName("header");
-   header[0].innerText = "DOM Manipulasyonu";
-   header[0].style.fontSize = 20;
-   header[0].style.fontFamily = "Tahoma";
-   header[0].style.color = "blue";
-
-   const body = document.querySelector("#body");
-   body.style.backgroundColor = "aqua";
-
-   const title = document.querySelector(".title");
-   title.innerText = "DOM Öğreniyorum"
-
-   const btn2 = document.getElementById("btn2");
-   btn2.onclick = function () {
-    document.getElementById("body").style.backgroundColor = "green";
-    document.querySelector("#btn2").innerText = "TIKLANDI";
-   }
-
+      const h1 = document.createElement("h1");
+      const text = document.createTextNode("Programlama Dilleri");
+      h1.appendChild(text);
+      document.body.appendChild(h1);
+      h1.style.color = "red";
+      h1.style.marginTop = "5%";
+      
+      document.querySelector(".renk").addEventListener("click", () => {
+        const renkler = [
+          "red",
+          "blue",
+          "green",
+          "yellow",
+          "black",
+          "pink",
+          "purple",
+          "brown",
+        ];
+        const rastgeleSayi = Math.floor(Math.random() * renkler.length);
+        document.querySelector("#body").style.backgroundColor =
+          renkler[rastgeleSayi];
+        document.querySelector(".renk-yazi").innerText = renkler[rastgeleSayi];
+      });
+      const paragraf = document.getElementById("demo");
+      paragraf.style.color = "red";
+      const yaziSiyah = () => (paragraf.style.color = "black");
+      const yaziMavi = () => (paragraf.style.color = "blue");
+      const buton2 = document.getElementById("btn2");
+      buton2.onclick = function () {
+        document.getElementById("body").style.backgroundColor = "green";
+        document.querySelector("#btn2").innerText = "TIKLANDI";
+      };
+      const buton = document.getElementById("btn");
+      buton.style.color = "yellow";
+      buton.style.backgroundColor = "black";
+      buton.innerText = "TIKLA";
+      buton.style.fontSize = 20;
+      const resim = document.getElementsByTagName("img");
+      resim[0].style.borderStyle = "solid";
+      resim[0].style.borderColor = "red";
+      const header = document.getElementsByClassName("header");
+      header[0].innerText = "DOM Manipulasyonu";
+      header[0].style.fontSize = 20;
+      header[0].style.fontFamily = "Tahoma";
+      header[0].style.color = "blue";
+      const body = document.querySelector("#body");
+      body.style.backgroundColor = "aqua";
+      const title = document.querySelector(".title");
+      title.innerText = "DOM OGRENIYORUM";
     </script>
-</body>
+  </body>
 </html>
